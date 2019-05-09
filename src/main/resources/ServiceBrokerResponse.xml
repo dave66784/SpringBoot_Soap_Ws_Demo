@@ -1,0 +1,13 @@
+<serviceBrokerRequest>
+	<serviceId>String</serviceId>
+	<inputParams>
+		<item>
+			<key>Name</key>
+			<value>A000</value>
+		</item>
+		<item>
+			<key>City</key>
+			<value>A001</value>
+		</item>
+	</inputParams>
+</serviceBrokerRequest>

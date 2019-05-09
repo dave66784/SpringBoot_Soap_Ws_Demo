@@ -1,0 +1,13 @@
+<serviceBrokerResponse>
+	<serviceId>String</serviceId>
+	<outputParams>
+		<item>
+			<key>Name</key>
+			<value>A000</value>
+		</item>
+		<item>
+			<key>City</key>
+			<value>A001</value>
+		</item>
+	</outputParams>
+</serviceBrokerResponse>

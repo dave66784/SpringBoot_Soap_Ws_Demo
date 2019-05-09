@@ -1,0 +1,42 @@
+<xs:schema attributeFormDefault="unqualified"
+	elementFormDefault="qualified"
+	xmlns:tns="http://example.com/ws/jaxb/generated"
+	targetNamespace="http://example.com/ws/jaxb/generated"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="serviceBrokerRequest"
+		type="tns:serviceBrokerRequestType" />
+	<xs:element name="serviceBrokerResponse"
+		type="tns:serviceBrokerResponseType" />
+	<xs:complexType name="itemType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="key" />
+			<xs:element type="xs:string" name="value" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="inputParamsType">
+		<xs:sequence>
+			<xs:element type="tns:itemType" name="item"
+				maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="outputParamsType">
+		<xs:sequence>
+			<xs:element type="tns:itemType" name="item"
+				maxOccurs="unbounded" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="serviceBrokerResponseType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="serviceId" />
+			<xs:element type="tns:outputParamsType"
+				name="outputParams" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="serviceBrokerRequestType">
+		<xs:sequence>
+			<xs:element type="xs:string" name="serviceId" />
+			<xs:element type="tns:inputParamsType" name="inputParams" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
